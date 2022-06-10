@@ -1,0 +1,43 @@
+<div class="mymodal w-75 newEmpPadding">
+    <div class="mymodal-content">
+    <div class="container w-75">
+        <h4>New Employee</h4>
+        <form (ngSubmit)="submit(f)" class="form-group" #f="ngForm">
+            <label for="id">ID</label>
+            <input class="form-control" type="text" id="id" name="id" [ngModel]="myFormObject.id" #idField="ngModel" disabled = true />
+    
+            <label for="first_name">First Name</label>
+            <input class="form-control" type="text" id="first_name" name="first_name" [ngModel]="myFormObject.first_name" #first_name="ngModel" required/>
+            <div style="color:red"
+                *ngIf="first_name.errors && first_name.touched"
+                >
+                Firstname is required!
+            </div>
+    
+            <label for="last_name">Last Name</label>
+            <input class="form-control" type="text" id="last_name" name="last_name" [ngModel]="myFormObject.last_name" required minlength="2" #last_name="ngModel"/>
+            <div style="color:red"
+            *ngIf="last_name.errors && last_name.touched"
+            >
+                <p *ngIf="last_name.errors['required']">Lastname is required!</p>
+                <p *ngIf="last_name.errors['minlength']">Lastname is too short!</p>
+            </div>
+
+            <label for="department">Department</label>
+            <input class="form-control" type="text" id="department" name="department" [ngModel]="myFormObject.department" #department = "ngModel" required/>
+            <div style="color:red"
+                *ngIf="department.errors && department.touched"
+                >
+                Department is required!
+            </div>
+
+            <label for="salary">Salary</label>
+            <input class="form-control" type="text" id="salary" name="salary" [(ngModel)]="myFormObject.salary"  #salary="ngModel"/>
+            <br/>
+            <button class="btn btn-success" [disabled]="!f.valid" type="submit">Add</button>
+            &nbsp;
+            <a class="btn btn-primary" routerLink="/employee">Cancel</a>
+        </form>
+    </div> 
+    </div>
+    </div>

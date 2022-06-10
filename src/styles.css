@@ -1,1 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
+.odd-item {
+  background-color: white;
+}
+
+.even-item {
+  background-color: lightblue;
+}
+
+.h4 {
+  color: white;
+}
+
+.h2 {
+  margin-top: 7em;
+}
+
+.customPadding {
+  margin-top: 1em;
+}
+
+.scale-50 {
+  width: 100% !important;
+  padding-left: 40em;
+  padding-right: 40em;
+  padding-top: 5em;
+}
+
+.newEmpPadding {
+  padding-left: 20em;
+}

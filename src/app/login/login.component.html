@@ -1,0 +1,18 @@
+
+
+<div Class="scale-50">
+<h3 class="text-center">Login </h3>
+<form (ngSubmit)="submit(loginForm)" #loginForm="ngForm">
+    <div class="form-group" >
+        <label for="username">Username</label>
+        <input class="form-control" type="text" id ="username" name="username" ngModel placeholder="Enter Your Username">
+    </div>
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input class="form-control" type="password" id ="password" name="password" ngModel placeholder="Enter Your Password">
+    </div>
+    
+     <button type="submit" class="btn btn-primary customPadding">Login</button>
+</form> 
+
+</div>
